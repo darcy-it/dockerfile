@@ -33,5 +33,12 @@ RUN yum install \
 
 RUN yum clean all && \
     rm -rf /var/cache/yum/*
+
+#
+# prompt
+#
+RUN echo "export PS1=\"[\u@\h \W]\]# \"" >> /root/.bashrc
+RUN echo 'alias ll="ls -l --color=auto"' >> /root/.bashrc
+RUN echo '. ~/.bashrc' >> /root/.bash_profile
     
-CMD ["/sbin/init"]
+#CMD ["/sbin/init"]
