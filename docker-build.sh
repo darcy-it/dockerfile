@@ -26,4 +26,8 @@ docker images
 
 end=$(date +%s)
 duration=$((end - start))
-echo "The script took $duration seconds."
+
+minutes=$((duration / 60))
+seconds=$((duration % 60))
+
+echo "The script took ${minutes}m ${seconds}s."
