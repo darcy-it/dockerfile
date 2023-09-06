@@ -5,7 +5,7 @@
 start=$(date +%s)
 
 # all image delete
-docker system prune -a -f
+#docker system prune -a -f
 
 #docker build -t my-amazonlinux2-image .
 docker build -t alinux:2.0.20230822.0 .
